@@ -68,7 +68,7 @@ export default function Testimonials() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  "{testimonial.quote}&quot;
+                  &quot;{testimonial.quote}&quot;
                 </p>
               </CardContent>
             </Card>

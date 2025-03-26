@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   description: "A farm",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
@@ -36,8 +34,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <Header /> */}
-          {children}
+          <Header />
+          {/* {children} */}
         </ThemeProvider>
       </body>
     </html>

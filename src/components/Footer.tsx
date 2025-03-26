@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   Facebook,
   Instagram,
-  Leaf,
   Mail,
   MapPin,
   Phone,
@@ -28,8 +27,6 @@ export default function Footer() {
                   height={50}
                 />
               </Link>
-              {/* <Leaf className="h-6 w-6 text-green-600" />
-              <span className="text-xl font-bold"></span> */}
             </div>
             <p className="text-sm text-muted-foreground">
               Sustainable farming solutions with guaranteed 23% ROI on
