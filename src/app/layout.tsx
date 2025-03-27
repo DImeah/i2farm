@@ -4,6 +4,7 @@ import "./globals.css";
 import ThemeProvider from "../../context/Theme";
 // import Navbar from "@/components/navigation/navbar";
 import Header from "@/components/Header";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,9 @@ export const metadata: Metadata = {
   description: "A farm",
 };
 
-export default function RootLayout({}: Readonly<{
+export default function RootLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
@@ -28,14 +31,15 @@ export default function RootLayout({}: Readonly<{
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {/* {children} */}
+          {/* <Header /> */}
+          {children}
         </ThemeProvider>
       </body>
     </html>
